@@ -1,0 +1,30 @@
+# Data and models
+data/
+models/
+*.csv
+*.zip
+*.pkl
+*.joblib
+*.parquet
+
+# Python caching
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# IDE files
+.vscode/
+.idea/
+.DS_Store
+
+# Environments
+.venv/
+venv/
+env/
+ENV/
