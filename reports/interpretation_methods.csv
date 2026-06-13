@@ -1,0 +1,5 @@
+dataset,model_name,interpretation_method
+ecommerce,Logistic Regression,linear_coefficient_contribution
+ecommerce,Random Forest,model_native_feature_importance
+creditcard,Logistic Regression,linear_coefficient_contribution
+creditcard,Random Forest,model_native_feature_importance

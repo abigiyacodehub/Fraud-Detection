@@ -1,0 +1,501 @@
+dataset,model_name,method,sample_index,rank,feature,contribution
+ecommerce,Logistic Regression,linear_coefficient_contribution,93885,1,num__ip_transaction_count,1.2261698013607738
+ecommerce,Logistic Regression,linear_coefficient_contribution,93885,2,num__transaction_velocity,-0.6773117890715098
+ecommerce,Logistic Regression,linear_coefficient_contribution,93885,3,num__device_transaction_count,0.6389431113472228
+ecommerce,Logistic Regression,linear_coefficient_contribution,93885,4,cat__source_Ads,-0.07215317337636858
+ecommerce,Logistic Regression,linear_coefficient_contribution,93885,5,cat__sex_M,-0.053994017838202533
+ecommerce,Logistic Regression,linear_coefficient_contribution,15955,1,num__device_transaction_count,-1.3939873739180597
+ecommerce,Logistic Regression,linear_coefficient_contribution,15955,2,num__ip_transaction_count,1.2261698013607738
+ecommerce,Logistic Regression,linear_coefficient_contribution,15955,3,num__transaction_velocity,-0.6796748421392937
+ecommerce,Logistic Regression,linear_coefficient_contribution,15955,4,cat__source_SEO,-0.13756800437306857
+ecommerce,Logistic Regression,linear_coefficient_contribution,15955,5,cat__sex_M,-0.053994017838202533
+ecommerce,Logistic Regression,linear_coefficient_contribution,43777,1,num__ip_transaction_count,-14.997815435513587
+ecommerce,Logistic Regression,linear_coefficient_contribution,43777,2,num__device_transaction_count,14.869456508204202
+ecommerce,Logistic Regression,linear_coefficient_contribution,43777,3,num__transaction_velocity,9.340495707809096
+ecommerce,Logistic Regression,linear_coefficient_contribution,43777,4,cat__source_Direct,0.06996976270402587
+ecommerce,Logistic Regression,linear_coefficient_contribution,43777,5,cat__sex_M,-0.053994017838202533
+ecommerce,Logistic Regression,linear_coefficient_contribution,56581,1,num__device_transaction_count,-1.3939873739180597
+ecommerce,Logistic Regression,linear_coefficient_contribution,56581,2,num__ip_transaction_count,1.2261698013607738
+ecommerce,Logistic Regression,linear_coefficient_contribution,56581,3,num__transaction_velocity,-0.6789465063049762
+ecommerce,Logistic Regression,linear_coefficient_contribution,56581,4,cat__sex_F,-0.08575739720699951
+ecommerce,Logistic Regression,linear_coefficient_contribution,56581,5,cat__source_Ads,-0.07215317337636858
+ecommerce,Logistic Regression,linear_coefficient_contribution,109972,1,num__device_transaction_count,-1.3939873739180597
+ecommerce,Logistic Regression,linear_coefficient_contribution,109972,2,num__ip_transaction_count,1.2261698013607738
+ecommerce,Logistic Regression,linear_coefficient_contribution,109972,3,num__transaction_velocity,-0.6779164175373203
+ecommerce,Logistic Regression,linear_coefficient_contribution,109972,4,cat__source_Ads,-0.07215317337636858
+ecommerce,Logistic Regression,linear_coefficient_contribution,109972,5,cat__sex_M,-0.053994017838202533
+ecommerce,Logistic Regression,linear_coefficient_contribution,54632,1,num__device_transaction_count,-1.3939873739180597
+ecommerce,Logistic Regression,linear_coefficient_contribution,54632,2,num__ip_transaction_count,1.2261698013607738
+ecommerce,Logistic Regression,linear_coefficient_contribution,54632,3,num__transaction_velocity,-0.6797960778473531
+ecommerce,Logistic Regression,linear_coefficient_contribution,54632,4,cat__sex_F,-0.08575739720699951
+ecommerce,Logistic Regression,linear_coefficient_contribution,54632,5,cat__source_Ads,-0.07215317337636858
+ecommerce,Logistic Regression,linear_coefficient_contribution,51663,1,num__ip_transaction_count,-23.109808053950765
+ecommerce,Logistic Regression,linear_coefficient_contribution,51663,2,num__device_transaction_count,23.00117844926533
+ecommerce,Logistic Regression,linear_coefficient_contribution,51663,3,num__transaction_velocity,13.794184121713855
+ecommerce,Logistic Regression,linear_coefficient_contribution,51663,4,cat__source_Direct,0.06996976270402587
+ecommerce,Logistic Regression,linear_coefficient_contribution,51663,5,cat__sex_M,-0.053994017838202533
+ecommerce,Logistic Regression,linear_coefficient_contribution,32860,1,num__device_transaction_count,-1.3939873739180597
+ecommerce,Logistic Regression,linear_coefficient_contribution,32860,2,num__ip_transaction_count,1.2261698013607738
+ecommerce,Logistic Regression,linear_coefficient_contribution,32860,3,num__transaction_velocity,-0.6725486938918648
+ecommerce,Logistic Regression,linear_coefficient_contribution,32860,4,cat__source_SEO,-0.13756800437306857
+ecommerce,Logistic Regression,linear_coefficient_contribution,32860,5,cat__sex_M,-0.053994017838202533
+ecommerce,Logistic Regression,linear_coefficient_contribution,31902,1,num__device_transaction_count,-1.3939873739180597
+ecommerce,Logistic Regression,linear_coefficient_contribution,31902,2,num__ip_transaction_count,1.2261698013607738
+ecommerce,Logistic Regression,linear_coefficient_contribution,31902,3,num__transaction_velocity,-0.6798125506390853
+ecommerce,Logistic Regression,linear_coefficient_contribution,31902,4,cat__source_Ads,-0.07215317337636858
+ecommerce,Logistic Regression,linear_coefficient_contribution,31902,5,cat__sex_M,-0.053994017838202533
+ecommerce,Logistic Regression,linear_coefficient_contribution,88052,1,num__device_transaction_count,-1.3939873739180597
+ecommerce,Logistic Regression,linear_coefficient_contribution,88052,2,num__ip_transaction_count,1.2261698013607738
+ecommerce,Logistic Regression,linear_coefficient_contribution,88052,3,num__transaction_velocity,-0.6790987754022422
+ecommerce,Logistic Regression,linear_coefficient_contribution,88052,4,cat__source_SEO,-0.13756800437306857
+ecommerce,Logistic Regression,linear_coefficient_contribution,88052,5,cat__sex_M,-0.053994017838202533
+ecommerce,Logistic Regression,linear_coefficient_contribution,75726,1,num__device_transaction_count,-1.3939873739180597
+ecommerce,Logistic Regression,linear_coefficient_contribution,75726,2,num__ip_transaction_count,1.2261698013607738
+ecommerce,Logistic Regression,linear_coefficient_contribution,75726,3,num__transaction_velocity,-0.6792067802576762
+ecommerce,Logistic Regression,linear_coefficient_contribution,75726,4,cat__source_Direct,0.06996976270402587
+ecommerce,Logistic Regression,linear_coefficient_contribution,75726,5,cat__sex_M,-0.053994017838202533
+ecommerce,Logistic Regression,linear_coefficient_contribution,71927,1,num__device_transaction_count,-1.3939873739180597
+ecommerce,Logistic Regression,linear_coefficient_contribution,71927,2,num__ip_transaction_count,1.2261698013607738
+ecommerce,Logistic Regression,linear_coefficient_contribution,71927,3,num__transaction_velocity,-0.6682832423197226
+ecommerce,Logistic Regression,linear_coefficient_contribution,71927,4,cat__sex_F,-0.08575739720699951
+ecommerce,Logistic Regression,linear_coefficient_contribution,71927,5,cat__source_Ads,-0.07215317337636858
+ecommerce,Logistic Regression,linear_coefficient_contribution,92765,1,num__device_transaction_count,-1.3939873739180597
+ecommerce,Logistic Regression,linear_coefficient_contribution,92765,2,num__ip_transaction_count,1.2261698013607738
+ecommerce,Logistic Regression,linear_coefficient_contribution,92765,3,num__transaction_velocity,-0.6792239924083948
+ecommerce,Logistic Regression,linear_coefficient_contribution,92765,4,cat__source_SEO,-0.13756800437306857
+ecommerce,Logistic Regression,linear_coefficient_contribution,92765,5,cat__sex_M,-0.053994017838202533
+ecommerce,Logistic Regression,linear_coefficient_contribution,117102,1,num__device_transaction_count,-1.3939873739180597
+ecommerce,Logistic Regression,linear_coefficient_contribution,117102,2,num__ip_transaction_count,1.2261698013607738
+ecommerce,Logistic Regression,linear_coefficient_contribution,117102,3,num__transaction_velocity,-0.6797551417067502
+ecommerce,Logistic Regression,linear_coefficient_contribution,117102,4,cat__source_SEO,-0.13756800437306857
+ecommerce,Logistic Regression,linear_coefficient_contribution,117102,5,cat__sex_M,-0.053994017838202533
+ecommerce,Logistic Regression,linear_coefficient_contribution,23188,1,num__device_transaction_count,-1.3939873739180597
+ecommerce,Logistic Regression,linear_coefficient_contribution,23188,2,num__ip_transaction_count,1.2261698013607738
+ecommerce,Logistic Regression,linear_coefficient_contribution,23188,3,num__transaction_velocity,-0.6796905050987886
+ecommerce,Logistic Regression,linear_coefficient_contribution,23188,4,cat__source_Ads,-0.07215317337636858
+ecommerce,Logistic Regression,linear_coefficient_contribution,23188,5,cat__sex_M,-0.053994017838202533
+ecommerce,Logistic Regression,linear_coefficient_contribution,44544,1,num__device_transaction_count,-1.3939873739180597
+ecommerce,Logistic Regression,linear_coefficient_contribution,44544,2,num__ip_transaction_count,1.2261698013607738
+ecommerce,Logistic Regression,linear_coefficient_contribution,44544,3,num__transaction_velocity,-0.6798415260605499
+ecommerce,Logistic Regression,linear_coefficient_contribution,44544,4,cat__source_Direct,0.06996976270402587
+ecommerce,Logistic Regression,linear_coefficient_contribution,44544,5,cat__sex_M,-0.053994017838202533
+ecommerce,Logistic Regression,linear_coefficient_contribution,7188,1,num__device_transaction_count,-1.3939873739180597
+ecommerce,Logistic Regression,linear_coefficient_contribution,7188,2,num__ip_transaction_count,1.2261698013607738
+ecommerce,Logistic Regression,linear_coefficient_contribution,7188,3,num__transaction_velocity,-0.6786600374766474
+ecommerce,Logistic Regression,linear_coefficient_contribution,7188,4,cat__source_Ads,-0.07215317337636858
+ecommerce,Logistic Regression,linear_coefficient_contribution,7188,5,cat__sex_M,-0.053994017838202533
+ecommerce,Logistic Regression,linear_coefficient_contribution,29255,1,num__device_transaction_count,-1.3939873739180597
+ecommerce,Logistic Regression,linear_coefficient_contribution,29255,2,num__ip_transaction_count,1.2261698013607738
+ecommerce,Logistic Regression,linear_coefficient_contribution,29255,3,num__transaction_velocity,-0.6798562470592803
+ecommerce,Logistic Regression,linear_coefficient_contribution,29255,4,cat__source_SEO,-0.13756800437306857
+ecommerce,Logistic Regression,linear_coefficient_contribution,29255,5,cat__sex_F,-0.08575739720699951
+ecommerce,Logistic Regression,linear_coefficient_contribution,5087,1,num__device_transaction_count,-1.3939873739180597
+ecommerce,Logistic Regression,linear_coefficient_contribution,5087,2,num__ip_transaction_count,1.2261698013607738
+ecommerce,Logistic Regression,linear_coefficient_contribution,5087,3,num__transaction_velocity,-0.679783920079513
+ecommerce,Logistic Regression,linear_coefficient_contribution,5087,4,cat__source_Ads,-0.07215317337636858
+ecommerce,Logistic Regression,linear_coefficient_contribution,5087,5,cat__sex_M,-0.053994017838202533
+ecommerce,Logistic Regression,linear_coefficient_contribution,37357,1,num__ip_transaction_count,1.2261698013607738
+ecommerce,Logistic Regression,linear_coefficient_contribution,37357,2,num__transaction_velocity,-0.6788072208145415
+ecommerce,Logistic Regression,linear_coefficient_contribution,37357,3,num__device_transaction_count,0.6389431113472228
+ecommerce,Logistic Regression,linear_coefficient_contribution,37357,4,cat__source_Ads,-0.07215317337636858
+ecommerce,Logistic Regression,linear_coefficient_contribution,37357,5,cat__sex_M,-0.053994017838202533
+ecommerce,Logistic Regression,linear_coefficient_contribution,117198,1,num__device_transaction_count,-1.3939873739180597
+ecommerce,Logistic Regression,linear_coefficient_contribution,117198,2,num__ip_transaction_count,1.2261698013607738
+ecommerce,Logistic Regression,linear_coefficient_contribution,117198,3,num__transaction_velocity,-0.6783043716106811
+ecommerce,Logistic Regression,linear_coefficient_contribution,117198,4,cat__sex_F,-0.08575739720699951
+ecommerce,Logistic Regression,linear_coefficient_contribution,117198,5,cat__source_Direct,0.06996976270402587
+ecommerce,Logistic Regression,linear_coefficient_contribution,144235,1,num__ip_transaction_count,-12.96981728090429
+ecommerce,Logistic Regression,linear_coefficient_contribution,144235,2,num__device_transaction_count,12.836526022938918
+ecommerce,Logistic Regression,linear_coefficient_contribution,144235,3,num__transaction_velocity,8.227073604332904
+ecommerce,Logistic Regression,linear_coefficient_contribution,144235,4,cat__source_Direct,0.06996976270402587
+ecommerce,Logistic Regression,linear_coefficient_contribution,144235,5,cat__sex_M,-0.053994017838202533
+ecommerce,Logistic Regression,linear_coefficient_contribution,104479,1,num__ip_transaction_count,1.2261698013607738
+ecommerce,Logistic Regression,linear_coefficient_contribution,104479,2,num__transaction_velocity,-0.676750940839175
+ecommerce,Logistic Regression,linear_coefficient_contribution,104479,3,num__device_transaction_count,0.6389431113472228
+ecommerce,Logistic Regression,linear_coefficient_contribution,104479,4,cat__source_Ads,-0.07215317337636858
+ecommerce,Logistic Regression,linear_coefficient_contribution,104479,5,cat__sex_M,-0.053994017838202533
+ecommerce,Logistic Regression,linear_coefficient_contribution,122908,1,num__ip_transaction_count,1.2261698013607738
+ecommerce,Logistic Regression,linear_coefficient_contribution,122908,2,num__transaction_velocity,-0.6754287758872334
+ecommerce,Logistic Regression,linear_coefficient_contribution,122908,3,num__device_transaction_count,0.6389431113472228
+ecommerce,Logistic Regression,linear_coefficient_contribution,122908,4,cat__source_Direct,0.06996976270402587
+ecommerce,Logistic Regression,linear_coefficient_contribution,122908,5,cat__sex_M,-0.053994017838202533
+ecommerce,Logistic Regression,linear_coefficient_contribution,6139,1,num__device_transaction_count,-1.3939873739180597
+ecommerce,Logistic Regression,linear_coefficient_contribution,6139,2,num__ip_transaction_count,1.2261698013607738
+ecommerce,Logistic Regression,linear_coefficient_contribution,6139,3,num__transaction_velocity,-0.6797056526705396
+ecommerce,Logistic Regression,linear_coefficient_contribution,6139,4,cat__source_SEO,-0.13756800437306857
+ecommerce,Logistic Regression,linear_coefficient_contribution,6139,5,cat__sex_F,-0.08575739720699951
+ecommerce,Random Forest,model_native_feature_importance,93885,1,cat__country_Unknown,0.0
+ecommerce,Random Forest,model_native_feature_importance,93885,2,cat__country_United States,0.0
+ecommerce,Random Forest,model_native_feature_importance,93885,3,cat__country_United Kingdom,0.0
+ecommerce,Random Forest,model_native_feature_importance,93885,4,cat__country_India,0.0
+ecommerce,Random Forest,model_native_feature_importance,93885,5,cat__country_Germany,0.0
+ecommerce,Random Forest,model_native_feature_importance,15955,1,cat__country_Unknown,0.0
+ecommerce,Random Forest,model_native_feature_importance,15955,2,cat__country_United States,0.0
+ecommerce,Random Forest,model_native_feature_importance,15955,3,cat__country_United Kingdom,0.0
+ecommerce,Random Forest,model_native_feature_importance,15955,4,cat__country_India,0.0
+ecommerce,Random Forest,model_native_feature_importance,15955,5,cat__country_Germany,0.0
+ecommerce,Random Forest,model_native_feature_importance,43777,1,cat__country_Unknown,0.0
+ecommerce,Random Forest,model_native_feature_importance,43777,2,cat__country_United States,0.0
+ecommerce,Random Forest,model_native_feature_importance,43777,3,cat__country_United Kingdom,0.0
+ecommerce,Random Forest,model_native_feature_importance,43777,4,cat__country_India,0.0
+ecommerce,Random Forest,model_native_feature_importance,43777,5,cat__country_Germany,0.0
+ecommerce,Random Forest,model_native_feature_importance,56581,1,cat__country_Unknown,0.0
+ecommerce,Random Forest,model_native_feature_importance,56581,2,cat__country_United States,0.0
+ecommerce,Random Forest,model_native_feature_importance,56581,3,cat__country_United Kingdom,0.0
+ecommerce,Random Forest,model_native_feature_importance,56581,4,cat__country_India,0.0
+ecommerce,Random Forest,model_native_feature_importance,56581,5,cat__country_Germany,0.0
+ecommerce,Random Forest,model_native_feature_importance,109972,1,cat__country_Unknown,0.0
+ecommerce,Random Forest,model_native_feature_importance,109972,2,cat__country_United States,0.0
+ecommerce,Random Forest,model_native_feature_importance,109972,3,cat__country_United Kingdom,0.0
+ecommerce,Random Forest,model_native_feature_importance,109972,4,cat__country_India,0.0
+ecommerce,Random Forest,model_native_feature_importance,109972,5,cat__country_Germany,0.0
+ecommerce,Random Forest,model_native_feature_importance,54632,1,cat__country_Unknown,0.0
+ecommerce,Random Forest,model_native_feature_importance,54632,2,cat__country_United States,0.0
+ecommerce,Random Forest,model_native_feature_importance,54632,3,cat__country_United Kingdom,0.0
+ecommerce,Random Forest,model_native_feature_importance,54632,4,cat__country_India,0.0
+ecommerce,Random Forest,model_native_feature_importance,54632,5,cat__country_Germany,0.0
+ecommerce,Random Forest,model_native_feature_importance,51663,1,cat__country_Unknown,0.0
+ecommerce,Random Forest,model_native_feature_importance,51663,2,cat__country_United States,0.0
+ecommerce,Random Forest,model_native_feature_importance,51663,3,cat__country_United Kingdom,0.0
+ecommerce,Random Forest,model_native_feature_importance,51663,4,cat__country_India,0.0
+ecommerce,Random Forest,model_native_feature_importance,51663,5,cat__country_Germany,0.0
+ecommerce,Random Forest,model_native_feature_importance,32860,1,cat__country_Unknown,0.0
+ecommerce,Random Forest,model_native_feature_importance,32860,2,cat__country_United States,0.0
+ecommerce,Random Forest,model_native_feature_importance,32860,3,cat__country_United Kingdom,0.0
+ecommerce,Random Forest,model_native_feature_importance,32860,4,cat__country_India,0.0
+ecommerce,Random Forest,model_native_feature_importance,32860,5,cat__country_Germany,0.0
+ecommerce,Random Forest,model_native_feature_importance,31902,1,cat__country_Unknown,0.0
+ecommerce,Random Forest,model_native_feature_importance,31902,2,cat__country_United States,0.0
+ecommerce,Random Forest,model_native_feature_importance,31902,3,cat__country_United Kingdom,0.0
+ecommerce,Random Forest,model_native_feature_importance,31902,4,cat__country_India,0.0
+ecommerce,Random Forest,model_native_feature_importance,31902,5,cat__country_Germany,0.0
+ecommerce,Random Forest,model_native_feature_importance,88052,1,cat__country_Unknown,0.0
+ecommerce,Random Forest,model_native_feature_importance,88052,2,cat__country_United States,0.0
+ecommerce,Random Forest,model_native_feature_importance,88052,3,cat__country_United Kingdom,0.0
+ecommerce,Random Forest,model_native_feature_importance,88052,4,cat__country_India,0.0
+ecommerce,Random Forest,model_native_feature_importance,88052,5,cat__country_Germany,0.0
+ecommerce,Random Forest,model_native_feature_importance,75726,1,cat__country_Unknown,0.0
+ecommerce,Random Forest,model_native_feature_importance,75726,2,cat__country_United States,0.0
+ecommerce,Random Forest,model_native_feature_importance,75726,3,cat__country_United Kingdom,0.0
+ecommerce,Random Forest,model_native_feature_importance,75726,4,cat__country_India,0.0
+ecommerce,Random Forest,model_native_feature_importance,75726,5,cat__country_Germany,0.0
+ecommerce,Random Forest,model_native_feature_importance,71927,1,cat__country_Unknown,0.0
+ecommerce,Random Forest,model_native_feature_importance,71927,2,cat__country_United States,0.0
+ecommerce,Random Forest,model_native_feature_importance,71927,3,cat__country_United Kingdom,0.0
+ecommerce,Random Forest,model_native_feature_importance,71927,4,cat__country_India,0.0
+ecommerce,Random Forest,model_native_feature_importance,71927,5,cat__country_Germany,0.0
+ecommerce,Random Forest,model_native_feature_importance,92765,1,cat__country_Unknown,0.0
+ecommerce,Random Forest,model_native_feature_importance,92765,2,cat__country_United States,0.0
+ecommerce,Random Forest,model_native_feature_importance,92765,3,cat__country_United Kingdom,0.0
+ecommerce,Random Forest,model_native_feature_importance,92765,4,cat__country_India,0.0
+ecommerce,Random Forest,model_native_feature_importance,92765,5,cat__country_Germany,0.0
+ecommerce,Random Forest,model_native_feature_importance,117102,1,cat__country_Unknown,0.0
+ecommerce,Random Forest,model_native_feature_importance,117102,2,cat__country_United States,0.0
+ecommerce,Random Forest,model_native_feature_importance,117102,3,cat__country_United Kingdom,0.0
+ecommerce,Random Forest,model_native_feature_importance,117102,4,cat__country_India,0.0
+ecommerce,Random Forest,model_native_feature_importance,117102,5,cat__country_Germany,0.0
+ecommerce,Random Forest,model_native_feature_importance,23188,1,cat__country_Unknown,0.0
+ecommerce,Random Forest,model_native_feature_importance,23188,2,cat__country_United States,0.0
+ecommerce,Random Forest,model_native_feature_importance,23188,3,cat__country_United Kingdom,0.0
+ecommerce,Random Forest,model_native_feature_importance,23188,4,cat__country_India,0.0
+ecommerce,Random Forest,model_native_feature_importance,23188,5,cat__country_Germany,0.0
+ecommerce,Random Forest,model_native_feature_importance,44544,1,cat__country_Unknown,0.0
+ecommerce,Random Forest,model_native_feature_importance,44544,2,cat__country_United States,0.0
+ecommerce,Random Forest,model_native_feature_importance,44544,3,cat__country_United Kingdom,0.0
+ecommerce,Random Forest,model_native_feature_importance,44544,4,cat__country_India,0.0
+ecommerce,Random Forest,model_native_feature_importance,44544,5,cat__country_Germany,0.0
+ecommerce,Random Forest,model_native_feature_importance,7188,1,cat__country_Unknown,0.0
+ecommerce,Random Forest,model_native_feature_importance,7188,2,cat__country_United States,0.0
+ecommerce,Random Forest,model_native_feature_importance,7188,3,cat__country_United Kingdom,0.0
+ecommerce,Random Forest,model_native_feature_importance,7188,4,cat__country_India,0.0
+ecommerce,Random Forest,model_native_feature_importance,7188,5,cat__country_Germany,0.0
+ecommerce,Random Forest,model_native_feature_importance,29255,1,cat__country_Unknown,0.0
+ecommerce,Random Forest,model_native_feature_importance,29255,2,cat__country_United States,0.0
+ecommerce,Random Forest,model_native_feature_importance,29255,3,cat__country_United Kingdom,0.0
+ecommerce,Random Forest,model_native_feature_importance,29255,4,cat__country_India,0.0
+ecommerce,Random Forest,model_native_feature_importance,29255,5,cat__country_Germany,0.0
+ecommerce,Random Forest,model_native_feature_importance,5087,1,cat__country_Unknown,0.0
+ecommerce,Random Forest,model_native_feature_importance,5087,2,cat__country_United States,0.0
+ecommerce,Random Forest,model_native_feature_importance,5087,3,cat__country_United Kingdom,0.0
+ecommerce,Random Forest,model_native_feature_importance,5087,4,cat__country_India,0.0
+ecommerce,Random Forest,model_native_feature_importance,5087,5,cat__country_Germany,0.0
+ecommerce,Random Forest,model_native_feature_importance,37357,1,cat__country_Unknown,0.0
+ecommerce,Random Forest,model_native_feature_importance,37357,2,cat__country_United States,0.0
+ecommerce,Random Forest,model_native_feature_importance,37357,3,cat__country_United Kingdom,0.0
+ecommerce,Random Forest,model_native_feature_importance,37357,4,cat__country_India,0.0
+ecommerce,Random Forest,model_native_feature_importance,37357,5,cat__country_Germany,0.0
+ecommerce,Random Forest,model_native_feature_importance,117198,1,cat__country_Unknown,0.0
+ecommerce,Random Forest,model_native_feature_importance,117198,2,cat__country_United States,0.0
+ecommerce,Random Forest,model_native_feature_importance,117198,3,cat__country_United Kingdom,0.0
+ecommerce,Random Forest,model_native_feature_importance,117198,4,cat__country_India,0.0
+ecommerce,Random Forest,model_native_feature_importance,117198,5,cat__country_Germany,0.0
+ecommerce,Random Forest,model_native_feature_importance,144235,1,cat__country_Unknown,0.0
+ecommerce,Random Forest,model_native_feature_importance,144235,2,cat__country_United States,0.0
+ecommerce,Random Forest,model_native_feature_importance,144235,3,cat__country_United Kingdom,0.0
+ecommerce,Random Forest,model_native_feature_importance,144235,4,cat__country_India,0.0
+ecommerce,Random Forest,model_native_feature_importance,144235,5,cat__country_Germany,0.0
+ecommerce,Random Forest,model_native_feature_importance,104479,1,cat__country_Unknown,0.0
+ecommerce,Random Forest,model_native_feature_importance,104479,2,cat__country_United States,0.0
+ecommerce,Random Forest,model_native_feature_importance,104479,3,cat__country_United Kingdom,0.0
+ecommerce,Random Forest,model_native_feature_importance,104479,4,cat__country_India,0.0
+ecommerce,Random Forest,model_native_feature_importance,104479,5,cat__country_Germany,0.0
+ecommerce,Random Forest,model_native_feature_importance,122908,1,cat__country_Unknown,0.0
+ecommerce,Random Forest,model_native_feature_importance,122908,2,cat__country_United States,0.0
+ecommerce,Random Forest,model_native_feature_importance,122908,3,cat__country_United Kingdom,0.0
+ecommerce,Random Forest,model_native_feature_importance,122908,4,cat__country_India,0.0
+ecommerce,Random Forest,model_native_feature_importance,122908,5,cat__country_Germany,0.0
+ecommerce,Random Forest,model_native_feature_importance,6139,1,cat__country_Unknown,0.0
+ecommerce,Random Forest,model_native_feature_importance,6139,2,cat__country_United States,0.0
+ecommerce,Random Forest,model_native_feature_importance,6139,3,cat__country_United Kingdom,0.0
+ecommerce,Random Forest,model_native_feature_importance,6139,4,cat__country_India,0.0
+ecommerce,Random Forest,model_native_feature_importance,6139,5,cat__country_Germany,0.0
+creditcard,Logistic Regression,linear_coefficient_contribution,10528,1,num__online_order,-0.3890918449811089
+creditcard,Logistic Regression,linear_coefficient_contribution,10528,2,num__Time,-0.3707010696847047
+creditcard,Logistic Regression,linear_coefficient_contribution,10528,3,num__device_risk,0.26116028114079676
+creditcard,Logistic Regression,linear_coefficient_contribution,10528,4,num__international,-0.2588113391034158
+creditcard,Logistic Regression,linear_coefficient_contribution,10528,5,num__merchant_risk,-0.13045556703462108
+creditcard,Logistic Regression,linear_coefficient_contribution,22872,1,num__online_order,-0.3890918449811089
+creditcard,Logistic Regression,linear_coefficient_contribution,22872,2,num__international,-0.2588113391034158
+creditcard,Logistic Regression,linear_coefficient_contribution,22872,3,num__risk_score_mean,-0.20978666068948493
+creditcard,Logistic Regression,linear_coefficient_contribution,22872,4,num__device_risk,-0.20129890951908755
+creditcard,Logistic Regression,linear_coefficient_contribution,22872,5,num__amount_log1p,-0.19550828905041154
+creditcard,Logistic Regression,linear_coefficient_contribution,14917,1,num__international,1.576404680066347
+creditcard,Logistic Regression,linear_coefficient_contribution,14917,2,num__Time,0.4246835021809305
+creditcard,Logistic Regression,linear_coefficient_contribution,14917,3,num__online_order,-0.3890918449811089
+creditcard,Logistic Regression,linear_coefficient_contribution,14917,4,num__device_risk,0.25275193221970793
+creditcard,Logistic Regression,linear_coefficient_contribution,14917,5,num__merchant_risk,-0.13045556703462108
+creditcard,Logistic Regression,linear_coefficient_contribution,42704,1,num__Time,-0.47840707083260825
+creditcard,Logistic Regression,linear_coefficient_contribution,42704,2,num__online_order,-0.3890918449811089
+creditcard,Logistic Regression,linear_coefficient_contribution,42704,3,num__device_risk,-0.2919222256686002
+creditcard,Logistic Regression,linear_coefficient_contribution,42704,4,num__risk_score_mean,-0.28613926067988366
+creditcard,Logistic Regression,linear_coefficient_contribution,42704,5,num__international,-0.2588113391034158
+creditcard,Logistic Regression,linear_coefficient_contribution,12942,1,num__Time,0.4810823969763286
+creditcard,Logistic Regression,linear_coefficient_contribution,12942,2,num__risk_score_mean,0.42819804499951986
+creditcard,Logistic Regression,linear_coefficient_contribution,12942,3,num__online_order,-0.3890918449811089
+creditcard,Logistic Regression,linear_coefficient_contribution,12942,4,num__international,-0.2588113391034158
+creditcard,Logistic Regression,linear_coefficient_contribution,12942,5,num__device_risk,0.2097759266230319
+creditcard,Logistic Regression,linear_coefficient_contribution,48145,1,num__online_order,-0.3890918449811089
+creditcard,Logistic Regression,linear_coefficient_contribution,48145,2,num__Time,0.3143486578770473
+creditcard,Logistic Regression,linear_coefficient_contribution,48145,3,num__international,-0.2588113391034158
+creditcard,Logistic Regression,linear_coefficient_contribution,48145,4,num__risk_score_mean,-0.16647124338723948
+creditcard,Logistic Regression,linear_coefficient_contribution,48145,5,num__num_items,0.10657089409779441
+creditcard,Logistic Regression,linear_coefficient_contribution,27647,1,num__online_order,-0.3890918449811089
+creditcard,Logistic Regression,linear_coefficient_contribution,27647,2,num__Time,-0.38312426780289005
+creditcard,Logistic Regression,linear_coefficient_contribution,27647,3,num__risk_score_mean,-0.34927698759502107
+creditcard,Logistic Regression,linear_coefficient_contribution,27647,4,num__international,-0.2588113391034158
+creditcard,Logistic Regression,linear_coefficient_contribution,27647,5,num__device_risk,-0.24053787115083533
+creditcard,Logistic Regression,linear_coefficient_contribution,33848,1,num__online_order,-0.3890918449811089
+creditcard,Logistic Regression,linear_coefficient_contribution,33848,2,num__Amount,0.323614506808827
+creditcard,Logistic Regression,linear_coefficient_contribution,33848,3,num__international,-0.2588113391034158
+creditcard,Logistic Regression,linear_coefficient_contribution,33848,4,num__amount_log1p,-0.2519030953082841
+creditcard,Logistic Regression,linear_coefficient_contribution,33848,5,num__hour_of_day,0.11288605285243514
+creditcard,Logistic Regression,linear_coefficient_contribution,20321,1,num__online_order,-0.3890918449811089
+creditcard,Logistic Regression,linear_coefficient_contribution,20321,2,num__Time,0.38834548816805664
+creditcard,Logistic Regression,linear_coefficient_contribution,20321,3,num__international,-0.2588113391034158
+creditcard,Logistic Regression,linear_coefficient_contribution,20321,4,num__device_risk,0.1509174841754102
+creditcard,Logistic Regression,linear_coefficient_contribution,20321,5,num__risk_score_mean,0.10076285657915608
+creditcard,Logistic Regression,linear_coefficient_contribution,39007,1,num__Time,-0.5323749237774524
+creditcard,Logistic Regression,linear_coefficient_contribution,39007,2,num__online_order,0.4189489524460422
+creditcard,Logistic Regression,linear_coefficient_contribution,39007,3,num__international,-0.2588113391034158
+creditcard,Logistic Regression,linear_coefficient_contribution,39007,4,num__hour_of_day,-0.12466309157167978
+creditcard,Logistic Regression,linear_coefficient_contribution,39007,5,num__amount_log1p,-0.12406680011025092
+creditcard,Logistic Regression,linear_coefficient_contribution,9410,1,num__online_order,-0.3890918449811089
+creditcard,Logistic Regression,linear_coefficient_contribution,9410,2,num__Time,-0.3792384292543667
+creditcard,Logistic Regression,linear_coefficient_contribution,9410,3,num__risk_score_mean,-0.2854051010645914
+creditcard,Logistic Regression,linear_coefficient_contribution,9410,4,num__international,-0.2588113391034158
+creditcard,Logistic Regression,linear_coefficient_contribution,9410,5,num__merchant_risk,-0.13045556703462108
+creditcard,Logistic Regression,linear_coefficient_contribution,2906,1,num__amount_log1p,0.47327657374669824
+creditcard,Logistic Regression,linear_coefficient_contribution,2906,2,num__online_order,-0.3890918449811089
+creditcard,Logistic Regression,linear_coefficient_contribution,2906,3,num__international,-0.2588113391034158
+creditcard,Logistic Regression,linear_coefficient_contribution,2906,4,num__Amount,-0.18542716820073607
+creditcard,Logistic Regression,linear_coefficient_contribution,2906,5,num__Time,-0.13913316721671198
+creditcard,Logistic Regression,linear_coefficient_contribution,27921,1,num__Time,-0.47538900575304915
+creditcard,Logistic Regression,linear_coefficient_contribution,27921,2,num__online_order,-0.3890918449811089
+creditcard,Logistic Regression,linear_coefficient_contribution,27921,3,num__device_risk,-0.2853823987299756
+creditcard,Logistic Regression,linear_coefficient_contribution,27921,4,num__risk_score_mean,-0.26925358952816086
+creditcard,Logistic Regression,linear_coefficient_contribution,27921,5,num__international,-0.2588113391034158
+creditcard,Logistic Regression,linear_coefficient_contribution,20705,1,num__online_order,0.4189489524460422
+creditcard,Logistic Regression,linear_coefficient_contribution,20705,2,num__device_risk,0.346178031342917
+creditcard,Logistic Regression,linear_coefficient_contribution,20705,3,num__international,-0.2588113391034158
+creditcard,Logistic Regression,linear_coefficient_contribution,20705,4,num__merchant_risk,-0.1300061657788501
+creditcard,Logistic Regression,linear_coefficient_contribution,20705,5,num__hour_of_day,0.10208836446952084
+creditcard,Logistic Regression,linear_coefficient_contribution,29652,1,num__Amount,0.42990284898163633
+creditcard,Logistic Regression,linear_coefficient_contribution,29652,2,num__online_order,0.4189489524460422
+creditcard,Logistic Regression,linear_coefficient_contribution,29652,3,num__Time,-0.33869554232937976
+creditcard,Logistic Regression,linear_coefficient_contribution,29652,4,num__amount_log1p,-0.28336926259451695
+creditcard,Logistic Regression,linear_coefficient_contribution,29652,5,num__international,-0.2588113391034158
+creditcard,Logistic Regression,linear_coefficient_contribution,45601,1,num__international,1.576404680066347
+creditcard,Logistic Regression,linear_coefficient_contribution,45601,2,num__online_order,-0.3890918449811089
+creditcard,Logistic Regression,linear_coefficient_contribution,45601,3,num__Time,0.3006301802426875
+creditcard,Logistic Regression,linear_coefficient_contribution,45601,4,num__risk_score_mean,-0.15252221069668587
+creditcard,Logistic Regression,linear_coefficient_contribution,45601,5,num__device_risk,-0.10880707138711067
+creditcard,Logistic Regression,linear_coefficient_contribution,8003,1,num__online_order,0.4189489524460422
+creditcard,Logistic Regression,linear_coefficient_contribution,8003,2,num__international,-0.2588113391034158
+creditcard,Logistic Regression,linear_coefficient_contribution,8003,3,num__Time,0.15608847147471003
+creditcard,Logistic Regression,linear_coefficient_contribution,8003,4,num__Amount,-0.08251087443612858
+creditcard,Logistic Regression,linear_coefficient_contribution,8003,5,num__hour_of_day,-0.05987696127419389
+creditcard,Logistic Regression,linear_coefficient_contribution,47931,1,num__online_order,-0.3890918449811089
+creditcard,Logistic Regression,linear_coefficient_contribution,47931,2,num__international,-0.2588113391034158
+creditcard,Logistic Regression,linear_coefficient_contribution,47931,3,num__Time,-0.2136276911149214
+creditcard,Logistic Regression,linear_coefficient_contribution,47931,4,num__Amount,-0.11939695498298888
+creditcard,Logistic Regression,linear_coefficient_contribution,47931,5,num__amount_log1p,0.07678218601439442
+creditcard,Logistic Regression,linear_coefficient_contribution,7182,1,num__international,1.576404680066347
+creditcard,Logistic Regression,linear_coefficient_contribution,7182,2,num__Time,0.48302212590695437
+creditcard,Logistic Regression,linear_coefficient_contribution,7182,3,num__online_order,-0.3890918449811089
+creditcard,Logistic Regression,linear_coefficient_contribution,7182,4,num__risk_score_mean,-0.2802659837575453
+creditcard,Logistic Regression,linear_coefficient_contribution,7182,5,num__device_risk,-0.27417126683519055
+creditcard,Logistic Regression,linear_coefficient_contribution,8192,1,num__online_order,0.4189489524460422
+creditcard,Logistic Regression,linear_coefficient_contribution,8192,2,num__Time,0.3135127878444421
+creditcard,Logistic Regression,linear_coefficient_contribution,8192,3,num__international,-0.2588113391034158
+creditcard,Logistic Regression,linear_coefficient_contribution,8192,4,num__Amount,-0.12225287353279245
+creditcard,Logistic Regression,linear_coefficient_contribution,8192,5,num__card_age_days,-0.10062914801971369
+creditcard,Logistic Regression,linear_coefficient_contribution,44881,1,num__Time,0.5027894950749761
+creditcard,Logistic Regression,linear_coefficient_contribution,44881,2,num__online_order,0.4189489524460422
+creditcard,Logistic Regression,linear_coefficient_contribution,44881,3,num__international,-0.2588113391034158
+creditcard,Logistic Regression,linear_coefficient_contribution,44881,4,num__num_items,-0.10668107428145701
+creditcard,Logistic Regression,linear_coefficient_contribution,44881,5,num__Amount,-0.10614962195076762
+creditcard,Logistic Regression,linear_coefficient_contribution,9534,1,num__Time,0.45609562561997846
+creditcard,Logistic Regression,linear_coefficient_contribution,9534,2,num__online_order,-0.3890918449811089
+creditcard,Logistic Regression,linear_coefficient_contribution,9534,3,num__amount_log1p,0.3792729331578514
+creditcard,Logistic Regression,linear_coefficient_contribution,9534,4,num__international,-0.2588113391034158
+creditcard,Logistic Regression,linear_coefficient_contribution,9534,5,num__risk_score_mean,-0.2134574587659464
+creditcard,Logistic Regression,linear_coefficient_contribution,1924,1,num__online_order,0.4189489524460422
+creditcard,Logistic Regression,linear_coefficient_contribution,1924,2,num__international,-0.2588113391034158
+creditcard,Logistic Regression,linear_coefficient_contribution,1924,3,num__Time,0.15139228564266874
+creditcard,Logistic Regression,linear_coefficient_contribution,1924,4,num__Amount,-0.12930664826423496
+creditcard,Logistic Regression,linear_coefficient_contribution,1924,5,num__amount_log1p,0.10132088095191141
+creditcard,Logistic Regression,linear_coefficient_contribution,12733,1,num__online_order,-0.3890918449811089
+creditcard,Logistic Regression,linear_coefficient_contribution,12733,2,num__risk_score_mean,-0.3140373260609909
+creditcard,Logistic Regression,linear_coefficient_contribution,12733,3,num__amount_log1p,0.312125985522809
+creditcard,Logistic Regression,linear_coefficient_contribution,12733,4,num__international,-0.2588113391034158
+creditcard,Logistic Regression,linear_coefficient_contribution,12733,5,num__Amount,-0.17434758057378735
+creditcard,Logistic Regression,linear_coefficient_contribution,41887,1,num__online_order,0.4189489524460422
+creditcard,Logistic Regression,linear_coefficient_contribution,41887,2,num__Time,-0.29912890055697755
+creditcard,Logistic Regression,linear_coefficient_contribution,41887,3,num__international,-0.2588113391034158
+creditcard,Logistic Regression,linear_coefficient_contribution,41887,4,num__risk_score_mean,-0.17014204146370096
+creditcard,Logistic Regression,linear_coefficient_contribution,41887,5,num__device_risk,-0.1153468983257353
+creditcard,Random Forest,model_native_feature_importance,10528,1,num__risk_score_mean,0.0
+creditcard,Random Forest,model_native_feature_importance,10528,2,num__hour_of_day,0.0
+creditcard,Random Forest,model_native_feature_importance,10528,3,num__amount_log1p,0.0
+creditcard,Random Forest,model_native_feature_importance,10528,4,num__online_order,0.0
+creditcard,Random Forest,model_native_feature_importance,10528,5,num__num_items,0.0
+creditcard,Random Forest,model_native_feature_importance,22872,1,num__risk_score_mean,0.0
+creditcard,Random Forest,model_native_feature_importance,22872,2,num__hour_of_day,0.0
+creditcard,Random Forest,model_native_feature_importance,22872,3,num__amount_log1p,0.0
+creditcard,Random Forest,model_native_feature_importance,22872,4,num__online_order,0.0
+creditcard,Random Forest,model_native_feature_importance,22872,5,num__num_items,0.0
+creditcard,Random Forest,model_native_feature_importance,14917,1,num__risk_score_mean,0.0
+creditcard,Random Forest,model_native_feature_importance,14917,2,num__hour_of_day,0.0
+creditcard,Random Forest,model_native_feature_importance,14917,3,num__amount_log1p,0.0
+creditcard,Random Forest,model_native_feature_importance,14917,4,num__online_order,0.0
+creditcard,Random Forest,model_native_feature_importance,14917,5,num__num_items,0.0
+creditcard,Random Forest,model_native_feature_importance,42704,1,num__risk_score_mean,0.0
+creditcard,Random Forest,model_native_feature_importance,42704,2,num__hour_of_day,0.0
+creditcard,Random Forest,model_native_feature_importance,42704,3,num__amount_log1p,0.0
+creditcard,Random Forest,model_native_feature_importance,42704,4,num__online_order,0.0
+creditcard,Random Forest,model_native_feature_importance,42704,5,num__num_items,0.0
+creditcard,Random Forest,model_native_feature_importance,12942,1,num__risk_score_mean,0.0
+creditcard,Random Forest,model_native_feature_importance,12942,2,num__hour_of_day,0.0
+creditcard,Random Forest,model_native_feature_importance,12942,3,num__amount_log1p,0.0
+creditcard,Random Forest,model_native_feature_importance,12942,4,num__online_order,0.0
+creditcard,Random Forest,model_native_feature_importance,12942,5,num__num_items,0.0
+creditcard,Random Forest,model_native_feature_importance,48145,1,num__risk_score_mean,0.0
+creditcard,Random Forest,model_native_feature_importance,48145,2,num__hour_of_day,0.0
+creditcard,Random Forest,model_native_feature_importance,48145,3,num__amount_log1p,0.0
+creditcard,Random Forest,model_native_feature_importance,48145,4,num__online_order,0.0
+creditcard,Random Forest,model_native_feature_importance,48145,5,num__num_items,0.0
+creditcard,Random Forest,model_native_feature_importance,27647,1,num__risk_score_mean,0.0
+creditcard,Random Forest,model_native_feature_importance,27647,2,num__hour_of_day,0.0
+creditcard,Random Forest,model_native_feature_importance,27647,3,num__amount_log1p,0.0
+creditcard,Random Forest,model_native_feature_importance,27647,4,num__online_order,0.0
+creditcard,Random Forest,model_native_feature_importance,27647,5,num__num_items,0.0
+creditcard,Random Forest,model_native_feature_importance,33848,1,num__risk_score_mean,0.0
+creditcard,Random Forest,model_native_feature_importance,33848,2,num__hour_of_day,0.0
+creditcard,Random Forest,model_native_feature_importance,33848,3,num__amount_log1p,0.0
+creditcard,Random Forest,model_native_feature_importance,33848,4,num__online_order,0.0
+creditcard,Random Forest,model_native_feature_importance,33848,5,num__num_items,0.0
+creditcard,Random Forest,model_native_feature_importance,20321,1,num__risk_score_mean,0.0
+creditcard,Random Forest,model_native_feature_importance,20321,2,num__hour_of_day,0.0
+creditcard,Random Forest,model_native_feature_importance,20321,3,num__amount_log1p,0.0
+creditcard,Random Forest,model_native_feature_importance,20321,4,num__online_order,0.0
+creditcard,Random Forest,model_native_feature_importance,20321,5,num__num_items,0.0
+creditcard,Random Forest,model_native_feature_importance,39007,1,num__risk_score_mean,0.0
+creditcard,Random Forest,model_native_feature_importance,39007,2,num__hour_of_day,0.0
+creditcard,Random Forest,model_native_feature_importance,39007,3,num__amount_log1p,0.0
+creditcard,Random Forest,model_native_feature_importance,39007,4,num__online_order,0.0
+creditcard,Random Forest,model_native_feature_importance,39007,5,num__num_items,0.0
+creditcard,Random Forest,model_native_feature_importance,9410,1,num__risk_score_mean,0.0
+creditcard,Random Forest,model_native_feature_importance,9410,2,num__hour_of_day,0.0
+creditcard,Random Forest,model_native_feature_importance,9410,3,num__amount_log1p,0.0
+creditcard,Random Forest,model_native_feature_importance,9410,4,num__online_order,0.0
+creditcard,Random Forest,model_native_feature_importance,9410,5,num__num_items,0.0
+creditcard,Random Forest,model_native_feature_importance,2906,1,num__risk_score_mean,0.0
+creditcard,Random Forest,model_native_feature_importance,2906,2,num__hour_of_day,0.0
+creditcard,Random Forest,model_native_feature_importance,2906,3,num__amount_log1p,0.0
+creditcard,Random Forest,model_native_feature_importance,2906,4,num__online_order,0.0
+creditcard,Random Forest,model_native_feature_importance,2906,5,num__num_items,0.0
+creditcard,Random Forest,model_native_feature_importance,27921,1,num__risk_score_mean,0.0
+creditcard,Random Forest,model_native_feature_importance,27921,2,num__hour_of_day,0.0
+creditcard,Random Forest,model_native_feature_importance,27921,3,num__amount_log1p,0.0
+creditcard,Random Forest,model_native_feature_importance,27921,4,num__online_order,0.0
+creditcard,Random Forest,model_native_feature_importance,27921,5,num__num_items,0.0
+creditcard,Random Forest,model_native_feature_importance,20705,1,num__risk_score_mean,0.0
+creditcard,Random Forest,model_native_feature_importance,20705,2,num__hour_of_day,0.0
+creditcard,Random Forest,model_native_feature_importance,20705,3,num__amount_log1p,0.0
+creditcard,Random Forest,model_native_feature_importance,20705,4,num__online_order,0.0
+creditcard,Random Forest,model_native_feature_importance,20705,5,num__num_items,0.0
+creditcard,Random Forest,model_native_feature_importance,29652,1,num__risk_score_mean,0.0
+creditcard,Random Forest,model_native_feature_importance,29652,2,num__hour_of_day,0.0
+creditcard,Random Forest,model_native_feature_importance,29652,3,num__amount_log1p,0.0
+creditcard,Random Forest,model_native_feature_importance,29652,4,num__online_order,0.0
+creditcard,Random Forest,model_native_feature_importance,29652,5,num__num_items,0.0
+creditcard,Random Forest,model_native_feature_importance,45601,1,num__risk_score_mean,0.0
+creditcard,Random Forest,model_native_feature_importance,45601,2,num__hour_of_day,0.0
+creditcard,Random Forest,model_native_feature_importance,45601,3,num__amount_log1p,0.0
+creditcard,Random Forest,model_native_feature_importance,45601,4,num__online_order,0.0
+creditcard,Random Forest,model_native_feature_importance,45601,5,num__num_items,0.0
+creditcard,Random Forest,model_native_feature_importance,8003,1,num__risk_score_mean,0.0
+creditcard,Random Forest,model_native_feature_importance,8003,2,num__hour_of_day,0.0
+creditcard,Random Forest,model_native_feature_importance,8003,3,num__amount_log1p,0.0
+creditcard,Random Forest,model_native_feature_importance,8003,4,num__online_order,0.0
+creditcard,Random Forest,model_native_feature_importance,8003,5,num__num_items,0.0
+creditcard,Random Forest,model_native_feature_importance,47931,1,num__risk_score_mean,0.0
+creditcard,Random Forest,model_native_feature_importance,47931,2,num__hour_of_day,0.0
+creditcard,Random Forest,model_native_feature_importance,47931,3,num__amount_log1p,0.0
+creditcard,Random Forest,model_native_feature_importance,47931,4,num__online_order,0.0
+creditcard,Random Forest,model_native_feature_importance,47931,5,num__num_items,0.0
+creditcard,Random Forest,model_native_feature_importance,7182,1,num__risk_score_mean,0.0
+creditcard,Random Forest,model_native_feature_importance,7182,2,num__hour_of_day,0.0
+creditcard,Random Forest,model_native_feature_importance,7182,3,num__amount_log1p,0.0
+creditcard,Random Forest,model_native_feature_importance,7182,4,num__online_order,0.0
+creditcard,Random Forest,model_native_feature_importance,7182,5,num__num_items,0.0
+creditcard,Random Forest,model_native_feature_importance,8192,1,num__risk_score_mean,0.0
+creditcard,Random Forest,model_native_feature_importance,8192,2,num__hour_of_day,0.0
+creditcard,Random Forest,model_native_feature_importance,8192,3,num__amount_log1p,0.0
+creditcard,Random Forest,model_native_feature_importance,8192,4,num__online_order,0.0
+creditcard,Random Forest,model_native_feature_importance,8192,5,num__num_items,0.0
+creditcard,Random Forest,model_native_feature_importance,44881,1,num__risk_score_mean,0.0
+creditcard,Random Forest,model_native_feature_importance,44881,2,num__hour_of_day,0.0
+creditcard,Random Forest,model_native_feature_importance,44881,3,num__amount_log1p,0.0
+creditcard,Random Forest,model_native_feature_importance,44881,4,num__online_order,0.0
+creditcard,Random Forest,model_native_feature_importance,44881,5,num__num_items,0.0
+creditcard,Random Forest,model_native_feature_importance,9534,1,num__risk_score_mean,0.0
+creditcard,Random Forest,model_native_feature_importance,9534,2,num__hour_of_day,0.0
+creditcard,Random Forest,model_native_feature_importance,9534,3,num__amount_log1p,0.0
+creditcard,Random Forest,model_native_feature_importance,9534,4,num__online_order,0.0
+creditcard,Random Forest,model_native_feature_importance,9534,5,num__num_items,0.0
+creditcard,Random Forest,model_native_feature_importance,1924,1,num__risk_score_mean,0.0
+creditcard,Random Forest,model_native_feature_importance,1924,2,num__hour_of_day,0.0
+creditcard,Random Forest,model_native_feature_importance,1924,3,num__amount_log1p,0.0
+creditcard,Random Forest,model_native_feature_importance,1924,4,num__online_order,0.0
+creditcard,Random Forest,model_native_feature_importance,1924,5,num__num_items,0.0
+creditcard,Random Forest,model_native_feature_importance,12733,1,num__risk_score_mean,0.0
+creditcard,Random Forest,model_native_feature_importance,12733,2,num__hour_of_day,0.0
+creditcard,Random Forest,model_native_feature_importance,12733,3,num__amount_log1p,0.0
+creditcard,Random Forest,model_native_feature_importance,12733,4,num__online_order,0.0
+creditcard,Random Forest,model_native_feature_importance,12733,5,num__num_items,0.0
+creditcard,Random Forest,model_native_feature_importance,41887,1,num__risk_score_mean,0.0
+creditcard,Random Forest,model_native_feature_importance,41887,2,num__hour_of_day,0.0
+creditcard,Random Forest,model_native_feature_importance,41887,3,num__amount_log1p,0.0
+creditcard,Random Forest,model_native_feature_importance,41887,4,num__online_order,0.0
+creditcard,Random Forest,model_native_feature_importance,41887,5,num__num_items,0.0

@@ -8,5 +8,6 @@ __all__ = [
     "eda_utils",
     "feature_engineering",
     "geolocation",
+    "interpretability",
     "preprocessing",
 ]
