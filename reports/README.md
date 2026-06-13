@@ -39,3 +39,5 @@ The Task 3 script creates:
 - `interpretation_methods.csv`
 - `task3_interpretability_summary.md`
 - `*_importance.png` feature-importance plots
+
+Final serving and deployment documentation lives in `DEPLOYMENT.md`.

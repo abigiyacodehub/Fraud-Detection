@@ -7,16 +7,19 @@ domains:
 - `creditcard.csv`: bank/card transaction data with amount, risk, card age, and class labels.
 - `IpAddress_to_Country.csv`: IP range lookup table used to enrich e-commerce transactions.
 
-The repository now covers Interim 1, Interim 2, and model interpretation:
+The repository now covers Interim 1, Interim 2, model interpretation, and final serving:
 data analysis, preprocessing, geolocation integration, feature engineering,
 model building, model comparison, saved model artifacts, and SHAP-oriented
-explainability.
+explainability plus a FastAPI deployment layer.
 
 ## Repository Structure
 
 ```text
 .
 |-- .github/workflows/       # CI unit test workflow
+|-- DEPLOYMENT.md            # FastAPI and Docker serving guide
+|-- Dockerfile
+|-- docker-compose.yml
 |-- data/
 |   |-- raw/                 # Local raw data, ignored by Git
 |   `-- processed/           # Generated Task 1 features, ignored by Git
@@ -34,6 +37,7 @@ explainability.
 |   |-- train_task2_models.py
 |   `-- explain_task3_models.py
 |-- src/
+|   |-- api/
 |   |-- eda_utils.py
 |   |-- geolocation.py
 |   |-- preprocessing.py
@@ -60,6 +64,7 @@ On macOS/Linux, activate with `source .venv/bin/activate`.
 python scripts/run_task1_pipeline.py
 python scripts/train_task2_models.py
 python scripts/explain_task3_models.py
+uvicorn src.api.main:app --reload
 python -m unittest discover -s tests
 ```
 
@@ -67,6 +72,8 @@ Task 1 outputs are written to `data/processed/` and `reports/`. Task 2 model
 artifacts are saved to `models/`, and model comparison outputs are saved to
 `reports/`. Task 3 interpretation outputs are saved to `reports/` as global
 importance tables, local explanation tables, method summaries, and PNG plots.
+The FastAPI app is available at `src.api.main:app`; deployment instructions are
+in `DEPLOYMENT.md`.
 
 ## Rubric Evidence Map
 
@@ -86,8 +93,10 @@ importance tables, local explanation tables, method summaries, and PNG plots.
 | Task 3 global explanations | `reports/shap_global_feature_importance.csv` and the `*_importance.png` plots summarize top model drivers. |
 | Task 3 local explanations | `reports/shap_local_explanations.csv` gives transaction-level feature contributions similar in purpose to force-plot explanations. |
 | Task 3 business interpretation | `reports/task3_interpretability_summary.md` explains model behavior for fraud analysts and notes interpretability limitations from the SHAP lecture. |
+| Final model serving | `src/api/main.py` exposes `/health`, `/model/info`, `/predict`, and `/predict/batch`; `src/api/pydantic_models.py` defines request/response validation schemas. |
+| Final deployment | `Dockerfile`, `docker-compose.yml`, and `DEPLOYMENT.md` document how to run the model API locally or in a container. |
 | Repository best practices | `.gitignore`, `requirements.txt`, CI workflow, clean folders, notebook separation, source scripts, reports, and models are organized by responsibility. |
-| Code best practices | Preprocessing, feature engineering, modeling, evaluation, geolocation, and interpretability are modularized with basic error handling around file loading, type conversion, model scoring, resampling choices, and explanation generation. |
+| Code best practices | Preprocessing, feature engineering, modeling, evaluation, geolocation, interpretability, and serving are modularized with basic error handling around file loading, type conversion, model scoring, resampling choices, explanation generation, and API validation. |
 
 ## Interim 2 Modeling Approach
 
@@ -104,6 +113,13 @@ importance tables, local explanation tables, method summaries, and PNG plots.
 - Global explanation outputs: ranked feature importance tables and PNG plots.
 - Local explanation outputs: top transaction-level feature contributions for sampled validation records.
 - Interpretation caution: explanations describe model behavior, not guaranteed causal relationships.
+
+## Final Serving Approach
+
+- Framework: FastAPI with Pydantic request/response schemas.
+- Endpoints: `/health`, `/model/info`, `/predict`, and `/predict/batch`.
+- Served models: e-commerce and credit-card Random Forest `.joblib` pipelines.
+- Deployment: local `uvicorn` command plus Docker and Docker Compose.
 
 ## Data Source Notes
 
