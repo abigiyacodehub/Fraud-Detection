@@ -1,10 +1,14 @@
 # Data and models
 data/
-models/
+models/*
+!models/.gitkeep
+!models/*.joblib
 *.csv
+!reports/*.csv
 *.zip
 *.pkl
 *.joblib
+!models/*.joblib
 *.parquet
 
 # Python caching

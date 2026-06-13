@@ -1,0 +1,20 @@
+[
+  {
+    "dataset": "Ecommerce",
+    "train_rows": 120889,
+    "test_rows": 30223,
+    "train_fraud_rate": 0.09364789186774644,
+    "test_fraud_rate": 0.09363729609899746,
+    "balanced_train_rows": 22642,
+    "balanced_train_fraud_rate": 0.5
+  },
+  {
+    "dataset": "CreditCard",
+    "train_rows": 40000,
+    "test_rows": 10000,
+    "train_fraud_rate": 0.00445,
+    "test_fraud_rate": 0.0045,
+    "balanced_train_rows": 356,
+    "balanced_train_fraud_rate": 0.5
+  }
+]

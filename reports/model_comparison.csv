@@ -1,0 +1,5 @@
+dataset,model_name,auc_pr,f1_score,tn,fp,fn,tp,best_params
+CreditCard,Random Forest,0.032348442155088065,0.01927550681289465,7020,2935,16,29,"{'max_depth': 6, 'min_samples_leaf': 5, 'n_estimators': 100}"
+CreditCard,Logistic Regression,0.031651071574649386,0.02374356944994064,7503,2452,15,30,{}
+Ecommerce,Random Forest,0.7124791054347314,0.6113722517058378,25644,1749,814,2016,"{'max_depth': 10, 'min_samples_leaf': 5, 'n_estimators': 50}"
+Ecommerce,Logistic Regression,0.6992838814648855,0.6133981467416072,25659,1734,811,2019,{}

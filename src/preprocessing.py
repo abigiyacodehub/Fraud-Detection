@@ -139,14 +139,45 @@ def apply_training_resampling(X_train, y_train, method: str = "smote", random_st
     """
 
     if method == "smote":
-        from imblearn.over_sampling import SMOTE
+        try:
+            from imblearn.over_sampling import SMOTE
 
-        sampler = SMOTE(random_state=random_state)
+            sampler = SMOTE(random_state=random_state)
+            return sampler.fit_resample(X_train, y_train)
+        except ImportError as exc:
+            raise ImportError(
+                "SMOTE requires imbalanced-learn. Install requirements.txt or use method='undersample'."
+            ) from exc
     elif method == "undersample":
-        from imblearn.under_sampling import RandomUnderSampler
+        try:
+            from imblearn.under_sampling import RandomUnderSampler
 
-        sampler = RandomUnderSampler(random_state=random_state)
+            sampler = RandomUnderSampler(random_state=random_state)
+            return sampler.fit_resample(X_train, y_train)
+        except ImportError:
+            return _manual_random_undersample(X_train, y_train, random_state=random_state)
     else:
         raise ValueError("method must be either 'smote' or 'undersample'")
 
-    return sampler.fit_resample(X_train, y_train)
+
+def _manual_random_undersample(X_train, y_train, random_state: int = 42):
+    """Dependency-light random undersampling fallback for training data only."""
+
+    import numpy as np
+    import pandas as pd
+
+    y_series = pd.Series(y_train).reset_index(drop=True)
+    class_counts = y_series.value_counts()
+    if len(class_counts) != 2:
+        raise ValueError("Manual undersampling expects a binary target")
+
+    minority_size = int(class_counts.min())
+    rng = np.random.default_rng(random_state)
+    selected_indices = []
+    for class_value in class_counts.index:
+        class_indices = y_series[y_series == class_value].index.to_numpy()
+        selected_indices.extend(
+            rng.choice(class_indices, size=minority_size, replace=False).tolist()
+        )
+    selected_indices = np.array(sorted(selected_indices))
+    return X_train[selected_indices], y_series.iloc[selected_indices]
