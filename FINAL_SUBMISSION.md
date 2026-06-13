@@ -50,6 +50,26 @@ python -m unittest discover -s tests
 
 Current local validation passed with all tests.
 
+### Validation Certification (Final Submission)
+
+The full test suite was executed against installed dependencies and passed:
+
+```text
+Ran 11 tests in 0.038s
+
+OK
+```
+
+Covered test modules:
+
+- `tests/test_task1_features.py` — Task 1 cleaning, type correction, geolocation, and velocity features.
+- `tests/test_modeling.py` — Task 2 evaluation metrics and model comparison ordering.
+- `tests/test_interpretability.py` — Task 3 transformed feature naming and importance report schema.
+- `tests/test_api_helpers.py` — serving feature construction and risk-label thresholds.
+
+This confirms the repository is complete across Task 1, Task 2, Task 3, and the
+final FastAPI deployment layer, and is submitted as the final version.
+
 ## Main Commands
 
 ```bash
