@@ -25,12 +25,28 @@ warnings.filterwarnings('ignore')
 
 def load_processed_creditcard_data(processed_dir='data/processed'):
     path = ROOT_DIR / processed_dir / 'creditcard_processed.csv'
-    return pd.read_csv(path)
+    if not path.exists():
+        raise FileNotFoundError(
+            f"Processed credit card data not found at '{path}'. "
+            "Run `python3 -m src.data_preprocessing` first."
+        )
+    try:
+        return pd.read_csv(path)
+    except Exception as exc:
+        raise RuntimeError(f"Failed to load credit card data from '{path}': {exc}") from exc
 
 
 def load_processed_fraud_data(processed_dir='data/processed'):
     path = ROOT_DIR / processed_dir / 'fraud_data_processed.csv'
-    return pd.read_csv(path)
+    if not path.exists():
+        raise FileNotFoundError(
+            f"Processed fraud data not found at '{path}'. "
+            "Run `python3 -m src.data_preprocessing` first."
+        )
+    try:
+        return pd.read_csv(path)
+    except Exception as exc:
+        raise RuntimeError(f"Failed to load fraud data from '{path}': {exc}") from exc
 
 
 def prepare_creditcard_dataset(processed_dir='data/processed'):
@@ -58,7 +74,6 @@ def describe_dataset(name: str, X: pd.DataFrame, y: pd.Series) -> None:
     print(f'Imbalance ratio (normal : fraud) = {distribution.iloc[0] / distribution.iloc[1]:.1f} : 1')
 
 
-
 def split_scale_resample(X: pd.DataFrame, y: pd.Series, random_state=42, test_size=0.2):
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=test_size, stratify=y, random_state=random_state)
@@ -68,7 +83,7 @@ def split_scale_resample(X: pd.DataFrame, y: pd.Series, random_state=42, test_si
     X_test_scaled = scaler.transform(X_test)
 
     smote = SMOTE(random_state=random_state)
-    X_train_res, y_train_res = smote.fit_resample(X_train_scaled, y_train) # type: ignore
+    X_train_res, y_train_res = smote.fit_resample(X_train_scaled, y_train)  # type: ignore
 
     print('Training set before resampling:', np.bincount(y_train.values))
     print('Training set after SMOTE:', np.bincount(y_train_res))
@@ -78,8 +93,11 @@ def split_scale_resample(X: pd.DataFrame, y: pd.Series, random_state=42, test_si
 
 
 def evaluate_model(clf, X_test, y_test, model_name: str, dataset_name: str):
-    y_pred = clf.predict(X_test)
-    y_proba = clf.predict_proba(X_test)[:, 1]
+    try:
+        y_pred = clf.predict(X_test)
+        y_proba = clf.predict_proba(X_test)[:, 1]
+    except Exception as exc:
+        raise RuntimeError(f"Prediction failed for {model_name} on {dataset_name}: {exc}") from exc
 
     ap = average_precision_score(y_test, y_proba)
     f1 = f1_score(y_test, y_pred)
@@ -121,20 +139,23 @@ def cross_validate_model(X: pd.DataFrame,
         X_val_scaled = scaler.transform(X_val)
 
         smote = SMOTE(random_state=random_state)
-        X_train_res, y_train_res = smote.fit_resample(X_train_scaled, y_train) # type: ignore
+        X_train_res, y_train_res = smote.fit_resample(X_train_scaled, y_train)  # type: ignore
 
-        clf = clone(base_model)
-        clf.fit(X_train_res, y_train_res)
+        model = clone(base_model)
+        try:
+            model.fit(X_train_res, y_train_res)
+        except Exception as exc:
+            raise RuntimeError(f"Model training failed on fold {fold}: {exc}") from exc
 
-        y_val_proba = clf.predict_proba(X_val_scaled)[:, 1]
-        y_val_pred = clf.predict(X_val_scaled)
+        y_val_pred = model.predict(X_val_scaled)
+        y_val_proba = model.predict_proba(X_val_scaled)[:, 1]
 
         metrics['average_precision'].append(average_precision_score(y_val, y_val_proba))
         metrics['f1_score'].append(f1_score(y_val, y_val_pred))
         metrics['roc_auc'].append(roc_auc_score(y_val, y_val_proba))
         print(f'  Fold {fold} | AP {metrics["average_precision"][-1]:.4f} | F1 {metrics["f1_score"][-1]:.4f} | ROC-AUC {metrics["roc_auc"][-1]:.4f}')
 
-    summary = {
+    return {
         'mean_average_precision': np.mean(metrics['average_precision']),
         'std_average_precision': np.std(metrics['average_precision']),
         'mean_f1_score': np.mean(metrics['f1_score']),
@@ -142,130 +163,143 @@ def cross_validate_model(X: pd.DataFrame,
         'mean_roc_auc': np.mean(metrics['roc_auc']),
         'std_roc_auc': np.std(metrics['roc_auc']),
     }
-    print('Cross-validation summary:', summary)
-    print('-' * 72)
-    return summary
 
 
 def tune_xgboost(X: pd.DataFrame, y: pd.Series, random_state=42):
-    candidate_params = [
-        {'n_estimators': 100, 'max_depth': 3},
-        {'n_estimators': 150, 'max_depth': 5},
-        {'n_estimators': 200, 'max_depth': 7},
-    ]
-    best_score = -np.inf
-    best_params = None
+    param_grid = {
+        'n_estimators': [100, 150, 200],
+        'max_depth': [3, 5, 7],
+    }
+    best_score = -1
+    best_params = {}
 
-    print('Tuning XGBoost with stratified CV (SMOTE inside each fold)...')
-    for params in candidate_params:
-        model = XGBClassifier(
-            use_label_encoder=False,
-            eval_metric='logloss',
-            n_jobs=-1,
-            random_state=random_state,
-            **params,
-        )
-        summary = cross_validate_model(X, y, model, n_splits=5, random_state=random_state)
-        if summary['mean_average_precision'] > best_score:
-            best_score = summary['mean_average_precision']
-            best_params = params
+    for n_est in param_grid['n_estimators']:
+        for max_d in param_grid['max_depth']:
+            model = XGBClassifier(
+                n_estimators=n_est,
+                max_depth=max_d,
+                use_label_encoder=False,
+                eval_metric='logloss',
+                n_jobs=-1,
+                random_state=random_state,
+            )
+            try:
+                summary = cross_validate_model(X, y, model, n_splits=5, random_state=random_state)
+            except Exception as exc:
+                print(f"  Skipping params n_estimators={n_est}, max_depth={max_d}: {exc}")
+                continue
 
-    print(f'Best XGBoost params: {best_params} | AP {best_score:.4f}')
+            if summary['mean_average_precision'] > best_score:
+                best_score = summary['mean_average_precision']
+                best_params = {'n_estimators': n_est, 'max_depth': max_d}
+
+    print(f'Best XGBoost params: {best_params} (CV AP={best_score:.4f})')
     return best_params
 
 
 def plot_feature_importance(model, feature_names, top_n=10, save_path=None):
-    if hasattr(model, 'feature_importances_'):
-        importance = model.feature_importances_
-    elif hasattr(model, 'coef_'):
-        importance = np.abs(model.coef_).flatten()
-    else:
+    if not hasattr(model, 'feature_importances_'):
         raise ValueError('Model does not expose feature importances.')
 
-    importance = pd.Series(importance, index=feature_names).sort_values(ascending=False).head(top_n)
+    importances = model.feature_importances_
+    indices = np.argsort(importances)[::-1][:top_n]
+    top_features = [feature_names[i] for i in indices]
+    top_importances = importances[indices]
+
     fig, ax = plt.subplots(figsize=(10, 6))
-    importance.plot.barh(ax=ax, color='#3182bd')
-    ax.invert_yaxis()
-    ax.set_title('Top Feature Importances')
-    ax.set_xlabel('Importance')
+    ax.barh(top_features[::-1], top_importances[::-1])
+    ax.set_xlabel('Feature Importance (Gain)')
+    ax.set_title(f'Top {top_n} Feature Importances')
     plt.tight_layout()
+
     if save_path:
-        fig.savefig(save_path, dpi=150, bbox_inches='tight')
-        print(f'Saved feature importance plot to {save_path}')
-    plt.close(fig)
-    return importance
+        try:
+            Path(save_path).parent.mkdir(parents=True, exist_ok=True)
+            plt.savefig(save_path, dpi=150, bbox_inches='tight')
+        except Exception as exc:
+            print(f"Warning: could not save feature importance plot to '{save_path}': {exc}")
+    plt.show()
+
+    return pd.Series(importances, index=feature_names).sort_values(ascending=False)
 
 
 def shap_explainability(model, X_test, y_test, feature_names, save_dir=None, sample_size=1000):
-    """
-    Generate SHAP plots and display them directly in the notebook.
-    
-    Parameters:
-        model: Trained model (e.g., XGBoost, RandomForest, etc.).
-        X_test: Test dataset (features).
-        y_test: True labels for the test dataset.
-        feature_names: List of feature names.
-        save_dir: Directory to save generated SHAP plots (default: None).
-        sample_size: Number of samples to use for SHAP analysis (default: 1000).
-    """
-    # Sample a subset of the test set for SHAP analysis
-    sample_idx = np.random.RandomState(42).choice(X_test.shape[0], min(sample_size, X_test.shape[0]), replace=False)
-    X_sample = X_test.iloc[sample_idx]
+    """Generate SHAP summary and force plots for TP, FP, and FN predictions.
 
-    # Create SHAP explainer and compute SHAP values
-    explainer = shap.TreeExplainer(model)
-    shap_values = explainer.shap_values(X_sample)
+    Parameters
+    ----------
+    model       : Trained tree model (XGBoost, RandomForest, etc.)
+    X_test      : Test feature DataFrame (scaled, columns = feature_names)
+    y_test      : True labels (Series or array, aligned with X_test)
+    feature_names : List of feature name strings
+    save_dir    : Directory to save generated SHAP plots (default: None)
+    sample_size : Number of samples to use for SHAP analysis (default: 1000)
+    """
+    sample_idx = np.random.RandomState(42).choice(
+        X_test.shape[0], min(sample_size, X_test.shape[0]), replace=False)
+    X_sample = X_test.iloc[sample_idx] if hasattr(X_test, 'iloc') else X_test[sample_idx]
 
-    # Generate and display the SHAP summary plot
-    plt.figure(figsize=(10, 8))
+    try:
+        explainer = shap.TreeExplainer(model)
+        shap_values = explainer.shap_values(X_sample)
+    except Exception as exc:
+        raise RuntimeError(f"SHAP TreeExplainer failed: {exc}") from exc
+
+    # --- Summary plot ---
+    plt.figure()
     shap.summary_plot(shap_values, X_sample, feature_names=feature_names, show=False)
-    plt.tight_layout()
     if save_dir:
-        save_dir_path = Path(save_dir)
-        save_dir_path.mkdir(parents=True, exist_ok=True)
-        plt.savefig(save_dir_path / 'shap_summary_plot.png', dpi=150, bbox_inches='tight')
-    plt.show()  # Ensure plot is displayed in the notebook
+        try:
+            save_dir_path = Path(save_dir)
+            save_dir_path.mkdir(parents=True, exist_ok=True)
+            plt.savefig(save_dir_path / 'shap_summary_plot.png', dpi=150, bbox_inches='tight')
+        except Exception as exc:
+            print(f"Warning: could not save SHAP summary plot: {exc}")
+    plt.show()
 
-    # Identify one true positive, false positive, and false negative using the full test set
+    # --- Force plots: TP, FP, FN ---
     y_pred = model.predict(X_test)
-    y_proba = model.predict_proba(X_test)[:, 1]
     cm = confusion_matrix(y_test, y_pred)
 
-    # Find indices for true positive, false positive, and false negative
-    indices = {
-        'true_positive': np.where((y_test == 1) & (y_pred == 1))[0],
-        'false_positive': np.where((y_test == 0) & (y_pred == 1))[0],
-        'false_negative': np.where((y_test == 1) & (y_pred == 0))[0],
-    }
-
     selected = {}
-    for label, idx_array in indices.items():
-        if len(idx_array) > 0:
-            selected[label] = idx_array[0]
+    for label, cond in [
+        ('true_positive', (y_test == 1) & (pd.Series(y_pred, index=y_test.index) == 1)),
+        ('false_positive', (y_test == 0) & (pd.Series(y_pred, index=y_test.index) == 1)),
+        ('false_negative', (y_test == 1) & (pd.Series(y_pred, index=y_test.index) == 0)),
+    ]:
+        indices = np.where(cond)[0]
+        if len(indices) == 0:
+            print(f'Warning: No {label} instances found — skipping force plot.')
+            continue
 
-    # Generate and display SHAP force plots for selected instances
-    for label, idx in selected.items():
-        instance = X_test.iloc[[idx]]
+        idx = indices[0]
+        selected[label] = idx
+        instance = X_test.iloc[[idx]] if hasattr(X_test, 'iloc') else X_test[[idx]]
+
         if idx in sample_idx:
             instance_shap_values = shap_values[np.where(sample_idx == idx)[0][0]]
         else:
-            instance_shap_values = explainer.shap_values(instance)[0]
+            try:
+                instance_shap_values = explainer.shap_values(instance)[0]
+            except Exception as exc:
+                print(f"Warning: SHAP force plot computation failed for {label}: {exc}")
+                continue
 
-        # Display the force plot directly in the notebook
-        shap.force_plot(
-            explainer.expected_value,
-            instance_shap_values,
-            instance,
-            feature_names=feature_names,
-            matplotlib=True,
-            show=False
-        )
-        plt.tight_layout()
-        if save_dir:
-            save_dir_path = Path(save_dir)
-            save_dir_path.mkdir(parents=True, exist_ok=True)
-            plt.savefig(save_dir_path / f'shap_force_plot_{label}.png', dpi=150, bbox_inches='tight')
-        plt.show()
+        try:
+            shap.force_plot(
+                explainer.expected_value,
+                instance_shap_values,
+                instance,
+                feature_names=feature_names,
+                matplotlib=True,
+                show=False,
+            )
+            plt.tight_layout()
+            if save_dir:
+                plt.savefig(save_dir_path / f'shap_force_plot_{label}.png', dpi=150, bbox_inches='tight')
+            plt.show()
+        except Exception as exc:
+            print(f"Warning: could not render force plot for {label}: {exc}")
 
     return {
         'feature_names': feature_names,
@@ -273,6 +307,7 @@ def shap_explainability(model, X_test, y_test, feature_names, save_dir=None, sam
         'selected_instances': selected,
         'confusion_matrix': cm,
     }
+
 
 def run_pipeline():
     results = []
@@ -288,34 +323,44 @@ def run_pipeline():
         X, y = prepare_fn('data/processed')
         describe_dataset(dataset_name, X, y)
 
-        X_train_scaled, X_test_scaled, y_train, y_test, X_train_res, y_train_res, scaler = split_scale_resample(X, y)
+        X_train_scaled, X_test_scaled, y_train, y_test, X_train_res, y_train_res, scaler = \
+            split_scale_resample(X, y)
 
         baseline = LogisticRegression(max_iter=1000, class_weight='balanced', random_state=42)
-        baseline.fit(X_train_res, y_train_res)
+        try:
+            baseline.fit(X_train_res, y_train_res)
+        except Exception as exc:
+            raise RuntimeError(f"Logistic Regression training failed on {dataset_name}: {exc}") from exc
         results.append(evaluate_model(baseline, X_test_scaled, y_test, 'LogisticRegression', dataset_name))
 
-        # Tune XGBoost on the full dataset and then fit the best ensemble on the train split.
         best_params = tune_xgboost(X, y)
         ensemble = XGBClassifier(
             use_label_encoder=False,
             eval_metric='logloss',
             n_jobs=-1,
             random_state=42,
-            **best_params, # type: ignore
+            **best_params,  # type: ignore
         )
-        ensemble.fit(X_train_res, y_train_res)
+        try:
+            ensemble.fit(X_train_res, y_train_res)
+        except Exception as exc:
+            raise RuntimeError(f"XGBoost training failed on {dataset_name}: {exc}") from exc
         results.append(evaluate_model(ensemble, X_test_scaled, y_test, 'XGBoost', dataset_name))
 
-        # Save feature importance for the chosen model
         feature_names = X.columns.tolist()
-        importance = plot_feature_importance(ensemble, feature_names, save_path=output_dir / f'{dataset_name}_feature_importance.png')
+        importance = plot_feature_importance(
+            ensemble, feature_names,
+            save_path=output_dir / f'{dataset_name}_feature_importance.png'
+        )
         importance.to_csv(output_dir / f'{dataset_name}_feature_importance.csv')
 
-        # Save the best model to disk for later explainability if it's the fraud dataset.
         if dataset_name == 'FraudData':
             import joblib
-            joblib.dump(ensemble, ROOT_DIR / 'models' / 'best_fraud_xgb.joblib')
-            print('Saved FraudData ensemble model artifact.')
+            try:
+                joblib.dump(ensemble, ROOT_DIR / 'models' / 'best_fraud_xgb.joblib')
+                print('Saved FraudData ensemble model artifact.')
+            except Exception as exc:
+                print(f"Warning: could not save model artifact: {exc}")
 
             shap_dir = ROOT_DIR / 'models' / 'shap_fraud'
             X_test_df = pd.DataFrame(X_test_scaled, columns=feature_names)
@@ -323,8 +368,11 @@ def run_pipeline():
 
     summary_df = pd.DataFrame(results)
     summary_path = output_dir / 'model_comparison_summary.csv'
-    summary_df.to_csv(summary_path, index=False)
-    print(f'Saved model comparison summary to {summary_path}')
+    try:
+        summary_df.to_csv(summary_path, index=False)
+        print(f'Saved model comparison summary to {summary_path}')
+    except Exception as exc:
+        print(f"Warning: could not save model comparison summary: {exc}")
     print(summary_df)
 
 
