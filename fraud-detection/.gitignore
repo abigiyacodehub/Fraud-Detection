@@ -1,0 +1,18 @@
+# Data and models
+data/
+models/
+
+# Python caching
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# IDE files
+.vscode/
+.idea/
+.DS_Store
